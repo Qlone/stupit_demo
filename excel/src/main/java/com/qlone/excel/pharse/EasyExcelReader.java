@@ -20,6 +20,7 @@ public class EasyExcelReader<T> {
     public List<T> read(InputStream inputStream){
         return EasyExcel.read(inputStream)
                 .head(type)
+                .autoCloseStream(true)
                 .excelType(ExcelTypeEnum.XLS)
                 .sheet()
                 .doReadSync();

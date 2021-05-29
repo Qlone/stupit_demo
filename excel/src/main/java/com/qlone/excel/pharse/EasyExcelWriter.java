@@ -37,6 +37,7 @@ public class EasyExcelWriter<T> {
              StyleHandler styleHandler = new StyleHandler()) {
             EasyExcel.write(outputStream, this.type)
                     .registerWriteHandler(styleHandler)
+                    .autoCloseStream(true)
                     //此处为 .xls结尾都文件,决定最终生成都workbook
                     .excelType(ExcelTypeEnum.XLS)
                     .sheet()
