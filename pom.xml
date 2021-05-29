@@ -6,7 +6,23 @@
 
     <groupId>com.qlone</groupId>
     <artifactId>stupitDemo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
+    <modules>
+        <module>excel</module>
+    </modules>
+    <properties>
+        <lombok.version>1.16.22</lombok.version>
+    </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
